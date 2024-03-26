@@ -1,6 +1,7 @@
 def modelo(dt, t_fi, elon, velo, masa, t_in, k_re, k_am):
 
     """
+    
     dt = Diferencial de tiempo
     t_fi = Tiempo final
     t_in = Tiempo inicial
@@ -9,6 +10,7 @@ def modelo(dt, t_fi, elon, velo, masa, t_in, k_re, k_am):
     k_re = constante elastica del resorte
     k_am = constante de amortiguacion
     acel = aceleracion
+
     """
 
     f_ac = 0

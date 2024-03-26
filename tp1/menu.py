@@ -1,7 +1,7 @@
 from modelo import modelo
 from diagrama import Diagrama
 
-def solicitar_valores():
+def valores():
     dt = int(1)
     t_fi = int(input("Ingrese el tiempo final (t_fi): "))
     elon = float(input("Ingrese la elongación inicial (elon): "))
@@ -24,7 +24,7 @@ def predeterminado():
     return dt, t_fi, elon, velo, masa, t_in, k_re, k_am
 
 
-def mostrar_menu():
+def menu():
     print("Menú de Oscilador Lineal")
     print("1. Simular y mostrar gráficos")
     print("2. Simular y mostrar gráficos con valores predeterminados")
@@ -34,9 +34,9 @@ def mostrar_menu():
 
 def main():
     while True:
-        opcion = mostrar_menu()
+        opcion = menu()
         if opcion == 1:
-            dt, t_fi, elon, velo, masa, t_in, k_re, k_am = solicitar_valores()
+            dt, t_fi, elon, velo, masa, t_in, k_re, k_am = valores()
             oscilador = modelo(dt, t_fi, elon, velo, masa, t_in, k_re, k_am)
             resultados = modelo(dt, t_fi, elon, velo, masa, t_in, k_re, k_am)
             diagrama = Diagrama()
